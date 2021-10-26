@@ -90,7 +90,7 @@ test('#filter', function (): void {
 });
 
 test('#flip', function (): void {
-    expect(BetterArray::from(["oranges", "apples", "pears"])->flip()->toArray())->toMatchSnapshot();
+    expect(BetterArray::from(['oranges', 'apples', 'pears'])->flip()->toArray())->toMatchSnapshot();
 });
 
 test('#intersectAssoc', function (): void {
