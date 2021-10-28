@@ -469,6 +469,15 @@ final class BetterArray
         return $this->commit(array_map(fn ($value) => $value[$key], $this->data));
     }
 
+    public function pull(string $key): mixed
+    {
+        $result = $this->data[$key];
+
+        unset($this->data[$key]);
+
+        return $result;
+    }
+
     public function toArray(): array
     {
         return $this->data;

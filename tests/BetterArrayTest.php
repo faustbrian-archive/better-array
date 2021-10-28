@@ -494,3 +494,9 @@ test('#pluck', function (): void {
 
     expect($subject->pluck('name')->toArray())->toMatchSnapshot();
 });
+
+test('#pull', function (): void {
+    $subject = BetterArray::from(['product_id' => 'prod-100', 'name' => 'Desk']);
+
+    expect($subject->pull('name'))->toMatchSnapshot();
+});
