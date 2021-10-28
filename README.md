@@ -15,9 +15,7 @@ composer require faustbrian/better-array
 
 ## Usage
 
-```php
-TBD
-```
+See our [extensive test suite](https://github.com/faustbrian/better-array/blob/main/tests/BetterArrayTest.php) for examples of all functions.
 
 ## Testing
 
