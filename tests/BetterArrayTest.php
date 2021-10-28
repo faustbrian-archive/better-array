@@ -485,3 +485,12 @@ test('#usort', function (): void {
 test('#toArray', function (): void {
     expect(BetterArray::from(['key' => 'value'])->toArray())->toMatchSnapshot();
 });
+
+test('#pluck', function (): void {
+    $subject = BetterArray::from([
+        ['product_id' => 'prod-100', 'name' => 'Desk'],
+        ['product_id' => 'prod-200', 'name' => 'Chair'],
+    ]);
+
+    expect($subject->pluck('name')->toArray())->toMatchSnapshot();
+});

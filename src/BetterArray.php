@@ -464,6 +464,11 @@ final class BetterArray
         return $this;
     }
 
+    public function pluck(string $key): static
+    {
+        return $this->commit(array_map(fn ($value) => $value[$key], $this->data));
+    }
+
     public function toArray(): array
     {
         return $this->data;
